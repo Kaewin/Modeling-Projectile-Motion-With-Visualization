@@ -28,35 +28,11 @@ This article presents a numerical simulation of projectile motion using Newton's
 
 3. Simulation Setup
 
-   - Description of the simulation parameters
-   - Implementation details
-     - Handling air resistance/drag forces
-     - Initialization of projectile properties (position, velocity, etc.)
+4. Visualization and Interpretation of Results
 
-4. Simulation Results and Analysis
+5. Conclusion
 
-   - Exploration of projectile motion without air resistance
-     - Trajectory analysis
-     - Range, maximum height, and time of flight calculations
-   - Incorporation of air resistance and its effects on projectile motion
-     - Discussion of drag force model used
-     - Analysis of changes in trajectory, range, maximum height, and time of flight
-     - Comparison with results from the previous section
-
-5. Visualization and Interpretation of Results
-
-   - Presentation of graphs and plots showcasing the simulation data
-   - Interpretation of the observed patterns and behaviors
-   - Discussion on the practical implications of the findings
-
-6. Conclusion
-
-   - Summary of the simulation study
-   - Key insights gained from the results
-   - Limitations and future directions
-   - Final remarks
-
-7. References (citations to relevant sources)
+6. References (citations to relevant sources)
 
 ## **Introduction**
 
@@ -289,13 +265,13 @@ To begin with, we will explore projectie motion without drag, introduce retardin
 
 Newton's second law for projectile motion in two dimensions is as follows:
 
-$\vec{F} = m \vec{a} = m \vec{g} $
+$\vec{F} = m \vec{a} = m \vec{g}$
 
 Using the independence of perpendicular motion, we split the forces into x and y components. And since the only force acting on the projectile is gravity, the x-direction will not have any resulting force.
 
-$F_x = m \ddot{x} = 0 $
+$F_x = m \ddot{x} = 0$
 
-$F_x = m \ddot{y} = -mg $
+$F_x = m \ddot{y} = -mg$
 
 Where the constant of gravity is given to three significant figures: $g = 9.81 m/s^2$
 
@@ -310,15 +286,17 @@ Reviewing the dynamical variables for our system we have the following:
 | Acceleration      | $a_x$                  | $a_y$                  |
 | Time              | $t$                    | $t$                    |
 
+
+
 #### **Solving For Position**
 
 Given that x = y = 0 at t = 0, since the particie is at the origin at this time. We can integrate the equations of motion to find the position of the particle at any time t.
 
-$ \ddot{x} = a_x = 0 $
+$\ddot{x} = a_x = 0$
 
-$ \dot{x} = \int_{0}^{t} a_x dt = v_{0x} + C = v_0 cos\theta + C $
+$\dot{x} = \int_{0}^{t} a_x dt = v_{0x} + C = v_0 cos\theta + C$
 
-$ x = \int_{0}^{t} v_x dt = v_{0x}t + C_1 = v_0 cos\theta t + C_1 $
+$x = \int_{0}^{t} v_x dt = v_{0x}t + C_1 = v_0 cos\theta t + C_1$
 
 Using the initial conditions we can solve for the constants of integration. In this case, since x = 0 at t = 0, we have:
 
@@ -332,15 +310,15 @@ $ x = v_0 cos\theta t $
 
 The same process can be used to solve for the y-direction:
 
-$ \ddot{y} = a_y = -g $
+$\ddot{y} = a_y = -g$
 
-$ \dot{y} = \int_{0}^{t} a_y dt = v_{0y} + C = v_0 sin\theta - gt + C $
+$\dot{y} = \int_{0}^{t} a_y dt = v_{0y} + C = v_0 sin\theta - gt + C$
 
-$ y = \int_{0}^{t} v_y dt = v_{0y}t + C_1 = v_0 sin\theta t - \frac{1}{2}gt^2 + C_1 $
+$y = \int_{0}^{t} v_y dt = v_{0y}t + C_1 = v_0 sin\theta t - \frac{1}{2}gt^2 + C_1$
 
 Using the initial conditions we can solve for the constants of integration. In this case, since y = 0 at t = 0, we have:
 
-$ y = v_0 sin\theta (0) - \frac{1}{2}g(0)^2 + C = 0$
+$y = v_0 sin\theta (0) - \frac{1}{2}g(0)^2 + C = 0$
 
 $C = 0$
 
@@ -350,7 +328,7 @@ Moving forward, a similar process will be used to determine the constants of int
 
 The final equation of motion for the y-direction is:
 
-$ y = v_0 sin\theta t - \frac{1}{2}gt^2 $
+$y = v_0 sin\theta t - \frac{1}{2}gt^2$
 
 #### **Solving For Speed**
 
@@ -410,7 +388,7 @@ This quick calculation shows that the maximum range refers to the distance trave
 
 ### **Retarding Forces And The Need For Numerical Methods**
 
-At this point we have solved for all of the dynamical variables in the system. Given the model configurations anything you want to know about the system follows from these equations. What makes things interesting is when we integrate air drag. Once that is done the equation no longer has a closed-form solution, and approximation methods must be used.
+At this point, all the system's dynamical variables have been solved. The equations following the model configurations provide all the information about the system. Integrating air drag makes things interesting, as it no longer allows for a closed-form equation solution. Approximation methods become necessary in this case.
 
 #### **Retarding Forces**
 
@@ -428,11 +406,11 @@ Where this model is useful is where the speed doesn't vary greatly.
 
 The power law approximation is a common approximation for retarding forces. It is given by:
 
-$ \vec{F_r} = -bv^n $
+$ \vec{F_r} = -kv^n $
 
-Where b is the strength of the retarding force, and n is a power.
+Where k is the strength of the retarding force, and n is a power.
 
-Where the velocity is less than 24 m/s n is taken to be 1, and for velocities between 24 m/s and the speed of sound n is taken to be 2.
+Where the velocity is less than 24 m/s `n` is taken to be 1, and for velocities between 24 m/s and the speed of sound `n` is taken to be 2.
 
 ##### **Air Drag**
 
@@ -521,9 +499,9 @@ This is a transcendental equation and cannot be solved analytically. We can solv
 
 ### **Using The Euler Method To Solve The Transcendental Equation Numerically**
 
-The first step to solving a differential equation using numerical methods is to convert the differential equation into a difference equation. A difference equation is an equation that relates values of a function to previous values of the function.
+The first step to solving a differential equation using numerical methods is to convert the differential equation into a difference equation. A difference equation is an equation that relates the values of a function to the previous values of the function.
 
-The simplest difference equation is a first-order difference equation, which can be represented by the following initial value problem:
+The most straightforward difference equation is a first-order difference equation, which the following initial value problem can represent:
 
 ```
 dy/dt = f(t, y)
@@ -542,7 +520,7 @@ Here, `Δt` represents the step size, `y(t)` is the approximate value of `y` at 
 
 The Euler Method is called a first-order method because it is accurate to the first order in `Δt`.
 
-From here all the mathematics has been laid out. From here the article will transition into describing the simulation.
+All the background mathematics have been laid out. From here the article will describe the simulation.
 
 ## Simulation Setup
 
@@ -555,7 +533,7 @@ In order to use VPython in a Jupyter Notebook the following import statement is 
 import vpython import *
 ```
 
-From here the rest of the simulation code is straightforward. The author wants to bring attention to specific parts of the code that are important to the simulation.
+From here, the rest of the simulation code is straightforward. The author wants to highlight specific parts of the code that are important to the simulation.
 
 The first is the timestep. 
 
@@ -564,16 +542,16 @@ The first is the timestep.
 When using the Euler method for numerical integration, the choice of timestep `(dt)` plays a crucial role in determining the accuracy and stability of the results. The timestep represents the size of each time increment used in the numerical approximation.
 
 The Euler method approximates the solution of a differential equation by updating the values of the dependent variable at discrete time intervals based on the current values and the derivative. The update equation in the Euler method is given by:
+
 ```
 y(t + dt) = y(t) + dy/dt * dt
 ```
-Here, `y(t)` represents the current value of the dependent variable at time `t`, `dy/dt` is the derivative of `y` with respect to `t`, and `dt` is the timestep.
 
-The choice of timestep affects the accuracy and precision of the numerical approximation. If the timestep is too large, the Euler method may introduce significant errors into the solution. This is because the method assumes that the derivative is constant over the entire timestep, which may not hold true for rapidly changing functions or complex systems.
+The choice of timestep affects the accuracy and precision of the numerical approximation. If the timestep is too large, the Euler method may introduce significant errors in the solution. This is because the method assumes the derivative is constant over the entire timestep, which may not hold for rapidly changing functions or complex systems.
 
 When the timestep is small, the Euler method provides a better approximation by capturing finer details and reducing the truncation error. Smaller timesteps allow for more frequent updates of the dependent variable, resulting in a more accurate approximation of its behavior.
 
-For the simulation specifically the timestep is set to 0.01. This is a good value for the simulation because it is small enough to provide a good approximation of the solution, but not so small that the simulation takes a long time to run.
+For the simulation expressly, the timestep is set to 0.01. This is a good value for the simulation because it is small enough to provide a good approximation of the solution but not so small that it takes a long time to run.
 
 #### Force Function
 
@@ -610,9 +588,9 @@ def Fnet(v): # since we are calculating drag we need the velocity
     return vector(Fnetx, Fnety, Fnetz)
 ```
 
-Here the calculation becomes more involved. Since drag depends on the velocity of the projectile we have to pass velocity in as a function argument. Then the unit vector in the direction of velocity is calculated, the magnitude of the drag using the power law approximation, and then the two are multiplied by each other to get the drag force vector.
+Here the calculation becomes more involved. Since drag depends on the projectile's velocity, we have to pass velocity in as a function argument. Then the unit vector in the velocity direction is calculated, the magnitude of the drag using the power law approximation, and then the two are multiplied by each other to get the drag force vector.
 
-Since the vector must point in the opposite direction of the velocity we multiply the drag force vector by -1. Then the function returns the resultant force as a vector.
+Since the vector must point in the opposite direction of the velocity, we multiply the drag force vector by -1. Then the function returns the resultant force as a vector.
 
 #### Numerical Loop
 
@@ -660,7 +638,7 @@ while r.y >= -0.1: # Stop the simulation when the projectile hits the ground.
     sleep(dt)
 ```
 
-The primary thing to notice here is that the acceleration is calculated using the force function. The acceleration is then used to update the velocity and position before the loop begins again.
+Notice that we calculate the acceleration using the force function and then use it to update the velocity and position before starting the loop again.
 
 ## Visualization And Interpretation Of Results
 
@@ -670,7 +648,7 @@ The primary thing to notice here is that the acceleration is calculated using th
 ![graph](images/no_drag/graph.png)
 ![output](images/no_drag/output.png)
 
-From here we can see that the energy changes from kinetic energy, to potential energy, then back to kinetic. The energy of the system as a whole remains constant since there is no non-conservative work.
+From here, we can see that the energy changes from kinetic to potential energy, then back to kinetic energy. The energy of the system as a whole remains constant since there is no non-conservative work.
 
 ### Drag
 
@@ -678,11 +656,19 @@ From here we can see that the energy changes from kinetic energy, to potential e
 ![graph](images/drag/graphs.png)
 ![output](images/drag/output.png)
 
-A very striking difference between the two simulations is the fact that the projectile with drag has a much shorter range than the projectile without drag. This is due to the fact that the drag force is proportional to the velocity squared. This means that as the velocity increases the drag force increases quadratically. This causes the projectile to slow down much faster than the projectile without drag.
+One noticeable contrast between the two simulations is that the projectile with drag has a significantly reduced range compared to the one without. This is because the drag force is directly proportional to the square of the velocity. Therefore, as the velocity increases linearly, the drag force increases quadratically. This results in the projectile losing its speed at a higher rate than the one without drag.
 
-Another difference is the fact the energy of the system is no longer constant. This is due to the fact that there is now non-conservative work being done on the system. This non-conservative work is the work done by the drag force. This causes the energy of the system to decrease over time.
+One notable distinction is that the system's energy is no longer consistent due to non-conservative work. The drag force is responsible for this non-conservative work, resulting in a gradual decrease in the system's energy over time.
 
 ## Conclusion
+
+In conclusion, the Euler method is a straightforward and effective way to solve differential equations numerically. It is straightforward to implement and can solve various differential equations. It is also straightforward to implement in a simulation. 
+
+By visualizing the two situations and comparing them, we gain valuable insights into the physical situation of projectile motion. We can immediately see a difference both in energy and range. Remember that the Euler method is not the most accurate for solving differential equations. Many other methods are more accurate and can solve more complex differential equations. However, the Euler method is a good starting point and can be used to gain a basic understanding of the situation.
+
+The primary thing to remember is that the projectile motion of actual physical objects is much more complicated than the simple model presented here, even with the drag taken into account and turning the model into one that can no longer be solved analytically. 
+   
+In reality, many other forces are acting on the projectile. We need to add these forces to the simulation to obtain a more accurate projectile motion model. However, we can take this simulation as a starting point and build upon it to create a more accurate model.   
 
 ## References
 
