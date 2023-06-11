@@ -334,55 +334,55 @@ $y = v_0 sin\theta t - \frac{1}{2}gt^2$
 
 The speed of the projectile can be found by taking the magnitude of the velocity vector:
 
-$ v = \sqrt{v_x^2 + v_y^2} $
+$v = \sqrt{v_x^2 + v_y^2}$
 
 In this case, we have solved for the velocity already in the x and y directions, so we can substitute those equations into the speed equation:
 
-$ v = \sqrt{(v_0 cos\theta)^2 + (v_0 sin\theta - gt)^2} $
+$v = \sqrt{(v_0 cos\theta)^2 + (v_0 sin\theta - gt)^2}$
 
 Working out the algebra we get:
 
-$ v = \sqrt{v_0^2 - 2v_0 sin\theta gt + g^2t^2} $
+$v = \sqrt{v_0^2 - 2v_0 sin\theta gt + g^2t^2}$
 
 #### **Solving For The Magnitude of the Position Vector**
 
 The position vector is a vector that points from the origin to the position of the particle as it changes. To find the distance from the origin to the particle, we can take the magnitude of the position vector:
 
-$ r = \sqrt{x^2 + y^2} $
+$r = \sqrt{x^2 + y^2}$
 
 In this case, we have solved for the position already in the x and y directions, so we can substitute those equations into the position equation:
 
-$ r = \sqrt{(v_0 cos\theta t)^2 + (v_0 sin\theta t - \frac{1}{2}gt^2)^2} $
+$r = \sqrt{(v_0 cos\theta t)^2 + (v_0 sin\theta t - \frac{1}{2}gt^2)^2}$
 
 Working out the algebra we get:
 
-$ r = \sqrt{v_0^2t^2 - 2v_0 sin\theta t^3 + \frac{1}{4}g^2t^4} $
+$r = \sqrt{v_0^2t^2 - 2v_0 sin\theta t^3 + \frac{1}{4}g^2t^4}$
 
 #### **Solving For Maxiumum Range**
 
 Finally we will get the maximum range equation. Following the same steps as before we have:
 
-$ x = v_0 cos\theta t $
+$x = v_0 cos\theta t$
 
-$ x = v_0 cos\theta \frac{2v_0 sin\theta}{g} $
+$x = v_0 cos\theta \frac{2v_0 sin\theta}{g}$
 
-$ x = \frac{2v_0^2 sin\theta cos\theta}{g} $
+$x = \frac{2v_0^2 sin\theta cos\theta}{g}$
 
 And converting this into a double angle we get:
 
-$ x = \frac{v_0^2 sin(2\theta)}{g} $
+$x = \frac{v_0^2 sin(2\theta)}{g}$
 
 From this we also see tht the maximum range occurs when $sin(2\theta) = 1$, which occurs when $\theta = 45^{\circ}$
 
 Lastly we will do the same but in the y-direction:
 
-$ y = v_0 sin\theta t - \frac{1}{2}gt^2 $
+$y = v_0 sin\theta t - \frac{1}{2}gt^2$
 
-$ y = v_0 sin\theta \frac{2v_0 sin\theta}{g} - \frac{1}{2}g(\frac{2v_0 sin\theta}{g})^2 $
+$y = v_0 sin\theta \frac{2v_0 sin\theta}{g} - \frac{1}{2}g(\frac{2v_0 sin\theta}{g})^2$
 
-$ y = \frac{2v_0^2 sin^2\theta}{g} - \frac{2v_0^2 sin^2\theta}{g} $
+$y = \frac{2v_0^2 sin^2\theta}{g} - \frac{2v_0^2 sin^2\theta}{g}$
 
-$ y = 0 $
+$y = 0$
 
 This quick calculation shows that the maximum range refers to the distance traveled in the horizontal direction, as the vertical direction ends up at the same height as it started.
 
@@ -396,7 +396,7 @@ A retarding force is a force that acts in the opposite direction of the motion o
 
 But handling drag, or any other retarding force is the same as handling multiple forces, the superposition principle applies. So we can add the retarding force to the equation of motion:
 
-$ \sum \vec{F} = \vec{F_g} + \vec{F_r}  = m\vec{g} + \vec{F_r}(v)$
+$\sum \vec{F} = \vec{F_g} + \vec{F_r}  = m\vec{g} + \vec{F_r}(v)$
 
 In this case the rearding force is a function of the velocity of the particle. We usually aprooximate the retarding force as some power of velocity. Keep in mind this by itself, is another approximation in our model, and retarding forces are usually far more complicated.
 
@@ -406,7 +406,7 @@ Where this model is useful is where the speed doesn't vary greatly.
 
 The power law approximation is a common approximation for retarding forces. It is given by:
 
-$ \vec{F_r} = -kv^n $
+$\vec{F_r} = -kv^n$
 
 Where k is the strength of the retarding force, and n is a power.
 
