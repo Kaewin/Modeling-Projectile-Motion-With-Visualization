@@ -25,14 +25,34 @@ This article presents a numerical simulation of projectile motion using Newton's
    - Introduction to numerical integration methods
      - Euler method
      - Brief mention of other integration methods
+  - Calculating Projectile Motion
+     - Solving Newton's Laws
+     - Solving For Position
+     - Solving For Speed
+     - Solving The Magnitude Of The Position Vector
+     - Solving For Maximum Range
+     
+  - Retarding Forces And The Need For Numerical Method
+     - Retarding Forces
+     - Adding In Air Drag
+     - The Euler method
 
 3. Simulation Setup
 
+   - Timestep
+   - Force Function
+   - Numerical Loop
+   
 4. Visualization and Interpretation of Results
 
+   - No Drag
+   - Drag
+   
 5. Conclusion
 
-6. References (citations to relevant sources)
+6. References
+
+
 
 ## **Introduction**
 
