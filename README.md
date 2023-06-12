@@ -312,7 +312,7 @@ Reviewing the dynamical variables for our system we have the following:
 
 #### **Solving For Position**
 
-Given that x = y = 0 at t = 0, since the particie is at the origin at this time. We can integrate the equations of motion to find the position of the particle at any time t.
+Given that x = y = 0 at t = 0, since the particle is at the origin at this time, we can integrate the equations of motion to find the position of the particle at any time t.
 
 $\ddot{x} = a_x = 0$
 
@@ -368,7 +368,7 @@ $v = \sqrt{v_0^2 - 2v_0 sin\theta gt + g^2t^2}$
 
 #### **Solving For The Magnitude of the Position Vector**
 
-The position vector is a vector that points from the origin to the position of the particle as it changes. To find the distance from the origin to the particle, we can take the magnitude of the position vector:
+The position vector points from the origin to the position of the particle as it changes. To find the distance from the origin to the particle, we can take the magnitude of the position vector:
 
 $r = \sqrt{x^2 + y^2}$
 
@@ -394,7 +394,7 @@ And converting this into a double angle we get:
 
 $x = \frac{v_0^2 sin(2\theta)}{g}$
 
-From this we also see tht the maximum range occurs when $sin(2\theta) = 1$, which occurs when $\theta = 45^{\circ}$
+From this we also see that the maximum range occurs when $sin(2\theta) = 1$, which occurs when $\theta = 45^{\circ}$
 
 Lastly we will do the same but in the y-direction:
 
@@ -414,13 +414,13 @@ At this point, all the system's dynamical variables have been solved. The equati
 
 #### **Retarding Forces**
 
-A retarding force is a force that acts in the opposite direction of the motion of the particle. In the case of projectile motion the retarding force is air drag.
+A retarding force acts in the opposite direction of the motion of the particle. In the case of projectile motion the retarding force is air drag.
 
 But handling drag, or any other retarding force is the same as handling multiple forces, the superposition principle applies. So we can add the retarding force to the equation of motion:
 
 $\sum \vec{F} = \vec{F_g} + \vec{F_r}  = m\vec{g} + \vec{F_r}(v)$
 
-In this case the rearding force is a function of the velocity of the particle. We usually aprooximate the retarding force as some power of velocity. Keep in mind this by itself, is another approximation in our model, and retarding forces are usually far more complicated.
+In this case the rearding force is a function of the velocity of the particle. We usually approximate the retarding force as some power of velocity. Keep in mind this by itself, is another approximation in our model, and retarding forces are usually far more complicated.
 
 Where this model is useful is where the speed doesn't vary greatly. 
 
