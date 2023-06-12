@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1686524412 "c:/Users/gerba/Programming/computational_physics/comp_phys_projectile_motion/index.tex" "index.pdf" "index" 1686524415 2
+["pdflatex"] 1686586904 "c:/Users/gerba/Programming/computational_physics/comp_phys_projectile_motion/index.tex" "index.pdf" "index" 1686586907 2
   "C:/Users/gerba/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1686524405 111315 969aa9ba260ad51d83694f9a758c66a6 ""
   "C:/Users/gerba/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1686012094 28976 497b4d522c592f6f448a4c124f77034d ""
   "C:/Users/gerba/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1686012098 31952 8b2494952a5188002586efe7a6368e11 ""
@@ -223,7 +223,7 @@
   "C:/Users/gerba/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/gerba/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/gerba/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/gerba/Programming/computational_physics/comp_phys_projectile_motion/index.tex" 1686524356 64108 eff3e990cf50c6d2fb5e4234dbfe76db ""
+  "c:/Users/gerba/Programming/computational_physics/comp_phys_projectile_motion/index.tex" 1686586862 64890 db334bf6476f49a7b5cf1e329f9a721d ""
   "images/drag/graphs.png" 1686520632 188027 c40bba361b419aba678b4a6f20593ee0 ""
   "images/drag/output.png" 1686425526 72869 ca9fad4945daf7fe3b58fba7ba86caec ""
   "images/drag/vis.png" 1686520443 54098 ce73762c9220c5710e91825d67a79a9c ""
@@ -232,9 +232,9 @@
   "images/no_drag/output.png" 1686427946 73328 3540de03d19cb262b67ae80dc053e7d9 ""
   "images/no_drag/vis.png" 1686520461 69424 03ffd72ce8d3e9517c3bd5fb7a633ef8 ""
   "images/parabolic_path.png" 1686451372 523071 ef69b14ae72301d8eeecf9ca05b58927 ""
-  "index.aux" 1686524414 10881 6b6ec75172699579173f45fdf8b16fab "pdflatex"
-  "index.out" 1686524414 4654 897a37af2731d75cba2cc7f49d3b3c91 "pdflatex"
-  "index.tex" 1686524356 64108 eff3e990cf50c6d2fb5e4234dbfe76db ""
+  "index.aux" 1686586906 10883 e7a0812827e5183716f0777d09ca5525 "pdflatex"
+  "index.out" 1686586906 4654 897a37af2731d75cba2cc7f49d3b3c91 "pdflatex"
+  "index.tex" 1686586862 64890 db334bf6476f49a7b5cf1e329f9a721d ""
   (generated)
   "index.aux"
   "index.log"
