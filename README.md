@@ -8,6 +8,8 @@ June 10, 2023
 
 [Website](https://linktr.ee/kaelyn_parris)
 
+[Blog Post](https://medium.com/@gerbald_6941/numerical-simulation-of-projectile-motion-exploring-trajectories-and-dynamics-with-euler-method-226f18aaa2c3)
+
 ## Abstract
 
 This article presents a numerical simulation of projectile motion using Newton's laws. The simulation investigates projectile motion with and without air resistance. Using the Euler method for numerical integration, the trajectory, range, maximum height, and time of flight of projectiles are analyzed under various launch conditions. The simulation results are visualized, accompanied by graphs of dynamical variables, facilitating a comprehensive understanding of the projectile's behavior throughout its motion.
