@@ -25,14 +25,34 @@ This article presents a numerical simulation of projectile motion using Newton's
    - Introduction to numerical integration methods
      - Euler method
      - Brief mention of other integration methods
+  - Calculating Projectile Motion
+     - Solving Newton's Laws
+     - Solving For Position
+     - Solving For Speed
+     - Solving The Magnitude Of The Position Vector
+     - Solving For Maximum Range
+     
+  - Retarding Forces And The Need For Numerical Method
+     - Retarding Forces
+     - Adding In Air Drag
+     - The Euler method
 
 3. Simulation Setup
 
+   - Timestep
+   - Force Function
+   - Numerical Loop
+   
 4. Visualization and Interpretation of Results
 
+   - No Drag
+   - Drag
+   
 5. Conclusion
 
-6. References (citations to relevant sources)
+6. References
+
+
 
 ## **Introduction**
 
@@ -300,13 +320,13 @@ $x = \int_{0}^{t} v_x dt = v_{0x}t + C_1 = v_0 cos\theta t + C_1$
 
 Using the initial conditions we can solve for the constants of integration. In this case, since x = 0 at t = 0, we have:
 
-$ x = v_0 cos\theta (0) + C = 0$
+$x = v_0 cos\theta (0) + C = 0$
 
 $C = 0$
 
 So the final equation of motion for the x-direction is:
 
-$ x = v_0 cos\theta t $
+$x = v_0 cos\theta t$
 
 The same process can be used to solve for the y-direction:
 
