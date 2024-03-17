@@ -112,7 +112,7 @@ These equations are fundamental in analyzing the motion of objects under constan
 
 In this case, we are interested in the motion of a projectile. We can use these equations to determine the projectile's position, velocity, and acceleration in the x and y directions.
 
-Appying the equations to our projectile motion scenario, we get the following:
+Applying the equations to our projectile motion scenario, we get the following:
 
 1. Horizontal motion:
    - Displacement in the x-direction: 
@@ -420,7 +420,7 @@ But handling drag, or any other retarding force is the same as handling multiple
 
 $\sum \vec{F} = \vec{F_g} + \vec{F_r}  = m\vec{g} + \vec{F_r}(v)$
 
-In this case the rearding force is a function of the velocity of the particle. We usually approximate the retarding force as some power of velocity. Keep in mind this by itself, is another approximation in our model, and retarding forces are usually far more complicated.
+In this case the retarding force is a function of the velocity of the particle. We usually approximate the retarding force as some power of velocity. Keep in mind this by itself, is another approximation in our model, and retarding forces are usually far more complicated.
 
 Where this model is useful is where the speed doesn't vary greatly. 
 
@@ -517,7 +517,7 @@ $\frac{V + \frac{g}{k}}{k}(1 - e^{-kT}) = \frac{g}{k}T$
 
 $T = \frac{kV + g}{gk}(1 - e^{-kT})$
 
-This is a transcendental equation and cannot be solved analytically. We can solve it numerically however. Two methods that will be discussed are the perturbation method, which we will use as a baseline, and the Euler method, which is what is implemented in the simulation.
+This is a transcendental equation and cannot be solved analytically. We can solve it numerically however.
 
 ### **Using The Euler Method To Solve The Transcendental Equation Numerically**
 
